@@ -1,0 +1,17 @@
+{
+  "name": "com-roojai-sightcall",
+  "version": "1.0.0",
+  "description": "This is a roojai sightcall.",
+  "cordova": {
+    "id": "com-roojai-sightcall",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Thanaphon Prasannanuruk",
+  "license": "For roojai company"
+}
