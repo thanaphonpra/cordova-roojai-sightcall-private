@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is a roojai sightcall.",
   "cordova": {
-    "id": "com-roojai-sightcall",
+    "id": "cordova-roojai-sightcall",
     "platforms": [
       "android"
     ]
