@@ -5,7 +5,7 @@ repositories {
 }
 
 dependencies {
-    implementation ('com.sightcall.universal:universal-sdk:4.4.0')
+    implementation ('com.sightcall.universal:universal-sdk:4.8.0-roojai')
 }
 
 android {
@@ -20,4 +20,8 @@ android {
         exclude 'thirdpartynotice.txt'
         exclude("META-INF/*.kotlin_module") 
     }
+}
+
+configurations.all {
+       resolutionStrategy { force 'androidx.core:core-ktx:1.6.0' }
 }

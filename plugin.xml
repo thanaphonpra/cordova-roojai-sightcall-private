@@ -1,16 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-roojai-sightcall" version="0.0.1" 
+<plugin id="cordova-roojai-sightcall" version="0.0.2" 
 xmlns="http://apache.org/cordova/nss/1.0" xmlns:android="http://schemas.android.com/apk/res/android" >
-<name>RoojaiPlugin</name>
+<name>RoojaiSightCallPlugin</name>
     <js-module name="RoojaiPlugin" src="www/RoojaiPlugin.js">
         <clobbers target="cordova.roojai.sightcall" />
     </js-module>
 <platform name="android">
      <hook type="after_prepare" src="hooks/android/manifest-hook.js"/>
      <config-file target="AndroidManifest.xml" parent="/*" mode="merge">
-        <uses-permission android:name="android.permission.CAMERA" />
-        <uses-permission android:name="android.permission.RECORD_AUDIO" />
-        <uses-permission android:name="android.permission.INTERNET" />
     </config-file>
     <edit-config file="app/src/main/AndroidManifest.xml" mode="overwrite" target="/manifest/application/meta-data[@android:name='firebase_analytics_collection_enabled']">
         <meta-data android:name="firebase_analytics_collection_enabled" android:value="true" tools:replace="android:value"/>
