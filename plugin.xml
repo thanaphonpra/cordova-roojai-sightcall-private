@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-roojai-sightcall" version="0.0.2" 
+<plugin id="cordova-roojai-sightcall" version="0.0.3" 
 xmlns="http://apache.org/cordova/nss/1.0" xmlns:android="http://schemas.android.com/apk/res/android" >
 <name>RoojaiSightCallPlugin</name>
     <js-module name="RoojaiPlugin" src="www/RoojaiPlugin.js">

@@ -5,7 +5,7 @@ repositories {
 }
 
 dependencies {
-    implementation ('com.sightcall.universal:universal-sdk:4.8.0-roojai')
+    implementation ('com.sightcall.universal:universal-sdk:5.2.2')
 }
 
 android {
@@ -19,6 +19,9 @@ android {
         exclude 'META-INF/NOTICE.txt'
         exclude 'thirdpartynotice.txt'
         exclude("META-INF/*.kotlin_module") 
+    }
+    buildFeatures {
+        viewBinding = true
     }
 }
 

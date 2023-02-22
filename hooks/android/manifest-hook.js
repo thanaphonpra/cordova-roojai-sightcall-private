@@ -39,13 +39,21 @@ module.exports = function (context) {
   const manifestPath = context.opts.projectRoot + '\\platforms\\android\\app\\src\\main\\AndroidManifest.xml';
   const androidManifest = fs.readFileSync(manifestPath).toString();
   
+  // console.log("@@@androidManifest",androidManifest);
   if (androidManifest) {
     parseString(androidManifest, (err, manifest) => {
       if (err) return console.error(err);
       manifestRoot = manifest['manifest'];
       manifestRoot.$['xmlns:tools'] = 'http://schemas.android.com/tools';
       var application = manifestRoot['application'];
-      application[0].$['tools:replace'] = "android:usesCleartextTraffic";
+      
+      application[0].$['tools:replace'] = ["android:allowBackup","android:usesCleartextTraffic"];
+
+      application[0].$['android:allowBackup'] = "false";
+      
+      // application[0].$['tools:replace'] = "android:usesCleartextTraffic";
+      
+      console.log("@@@application",application);
       fs.writeFileSync(manifestPath, builder.buildObject(manifest));
     });
   }
